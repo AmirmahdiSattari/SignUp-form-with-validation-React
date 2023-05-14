@@ -1,0 +1,24 @@
+.warning{
+    font-size: .6rem;
+    color: red;
+    opacity: .7;
+   display: none;
+}
+.inputData:invalid[focused="true"]~.warning{
+    display: block;
+}
+.inputData:invalid[focused="true"]{
+  
+    animation-name: error;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: .2rem;
+}
+@keyframes error{
+    0%{
+        border: 1px solid rgba(255, 0, 0, 0.378);
+    }
+    100%{
+        border: 1px solid rgba(255, 0, 0, 0.61);
+    }
+}
